@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .animate-spin {
+            animation: spin 4s linear infinite;
+        }
+
+        @keyframes updown {
+            0%, 100% { transform: rotate(20deg) translateY(0); }
+            50% { transform: rotate(20deg) translateY(-10px); }
+        }
+
+        .animate-updown {
+            animation: updown 1s ease-in-out infinite;
+        }
+
+        .icon-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .wrench {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(20deg);
+            font-size: 2em;
+            transform-origin: 50% 0;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+    <div class="text-center">
+        <h1 class="text-4xl font-bold mb-6">This website is currently under maintenance</h1>
+        <div class="icon-wrapper">
+            <div class="animate-spin text-6xl">⚙️</div>
+            <div class="wrench animate-updown">🔧</div>
+        </div>
+        <p class="text-lg mt-6">Just a little longer! We promise it’s worth the wait. Maybe!</p>
+    </div>
+</body>
+</html>
